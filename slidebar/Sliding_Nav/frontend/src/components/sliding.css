@@ -1,0 +1,281 @@
+.slide-nav-bar {
+  position: fixed;
+  /* top: 140; */
+  /* left: 0; */
+  width: 120px;
+  height: 100%;
+  background-color: #01144C;
+  color: white;
+  transition: transform 0.3s ease;
+  /* border-right: 1px solid #ccc;  */
+  border-bottom: 1px solid #ccc; /* Add border to the bottom of slide nav bar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toggle-button {
+  position: absolute;
+  /* top: 370; */
+  /* right: -40px;  */
+  width: 40px;
+  height: 40px;
+  
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: right 0.3s ease; /* Add transition for right property */
+  bottom: 160px;
+  left: 99px;
+  border: none;
+}
+
+/* .slide-nav-bar.expanded {
+  transform: translateX(0);
+} */
+
+.toggle-button.expanded {
+  left: 2; /* Adjust the position of the toggle button when expanded */
+}
+
+.nav-items {
+  list-style: none;
+  padding: 0;
+  /* margin: 30px 0; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  
+  
+}
+
+.welcome-text {
+  /* Existing styles */
+  margin: 2px 0; /* Adjust the margin to reduce the line space */
+}
+.nav-items li {
+  margin-bottom: 10px;
+}
+
+.nav-items li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+
+.nav-items li a i {
+  display: inline-block;
+  margin-right: 5px;
+}
+/* 
+.nav-items li a i.icon-home {
+  background-image: url('');
+  width: 16px;
+  height: 16px;
+}
+
+.nav-items li a i.icon-about {
+  background-image: url('C:\Users\USER\Downloads\Sliding_Nav\frontend\public\dashboard.png');
+  width: 16px;
+  height: 16px;
+}
+
+.nav-items li a i.icon-services {
+  background-image: url('');
+  width: 16px;
+  height: 16px;
+}
+
+.nav-items li a i.icon-contact {
+  background-image: url('C:\Users\USER\Downloads\Sliding_Nav\frontend\public\dashboard.png');
+  width: 90px;
+  height: 90px;
+} */
+
+  
+  .notification-dropdown.active {
+    visibility: visible; /* Show the dropdown */
+    opacity: 1;
+  }
+    
+
+  .notification-dropdown{
+    transition: 0.3s;
+    border-radius: 5px;
+    width:188px    
+}
+  .notification-card {
+    border-bottom: 1px solid #ccc;
+    width:160px;
+    padding: 5px 0;
+    margin-left: 1px;
+    
+    
+  }
+  
+  .notification-card:last-child {
+    border-bottom: none;
+  }
+  
+
+  .slide-nav-bar.expanded {
+    width: 190px; /* Adjust the width as needed */
+  }
+  
+  .slide-nav-bar .nav-items {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .slide-nav-bar .nav-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: px;
+    
+  flex-direction: column;
+  align-items: center;
+  }
+  
+  .slide-nav-bar .nav-item a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+/*   
+  .slide-nav-bar .nav-item a:hover {
+    color: #fff;
+    background-color: #000;
+  } */
+  
+  .slide-nav-bar .nav-item.notification {
+    position: relative;
+  }
+  
+  .slide-nav-bar .nav-item.notification a {
+    display: flex;
+    align-items: center;
+  }
+/*   
+  .slide-nav-bar .nav-item.notification .notification-dropdown {
+    position: absolute;
+    top: calc(100% + 5px); 
+    left: 0;
+    background-color: #122567; 
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1; 
+    width:170px;
+  } */
+  
+  .slide-nav-bar .notification-dropdown {
+    position: absolute;
+    top: calc(100% + 5px); /* Position below the notification */
+    left: 0;
+    background-color: #122567; /* Set the background color */
+    color: #fff; /* Set the text color */
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensure the dropdown is above the navigation bar */
+    width: 160px; /* Adjust the width to fill the available space */
+   
+    margin-left: -23px;
+  }
+  
+  .slide-nav-bar .nav-item.notification .notification-dropdown .notification-card {
+    padding: 5px;
+  }
+  
+  .slide-nav-bar .toggle-button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: right 0.3s ease;
+    border: none; /* Remove the border */
+  }
+   
+  .slide-nav-bar .toggle-button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: right 0.3s ease;
+    border: none; /* Remove the border */
+  }
+  
+  #nav-item.selected a {
+    background-color: #5729CE;
+    padding: 10px 40px;
+    border-radius: 10px;
+
+    
+  }
+  
+  #nav-item-icon.selected a {
+    background-image: linear-gradient(to top, #5729CE, #A53ED5);
+    padding: 20px 40px;
+    border-radius: 10px;
+  }
+  
+  .slide-nav-bar .toggle-button.expanded {
+    left: 89%;
+  }
+
+  .TfiArrowCircleLeft {
+    fill: #FF0000; /* Replace with your desired color */
+  }
+  
+  .TfiArrowCircleLeft path {
+    fill: #FFFFFF; /* Set the arrow color to white */
+  }
+  
+
+  .notification-dropdown {
+    max-height: 190px; /* Set the maximum height to limit the container's height */
+    overflow: hidden; /* Hide the content outside the container */
+    scrollbar-width: thin; /* Show a thin scrollbar (works in Firefox) */
+    scrollbar-color: #5729CE #F5F5F5; /* Set the color of the scrollbar thumb and track */
+
+  }
+  .notification-card-container {
+    overflow-y: auto; /* Enable automatic scrolling when content exceeds container height */
+    max-height: 150px; /* Set the maximum height of the container */
+  }
+  
+  .notification-card-container::-webkit-scrollbar {
+    width: 5px;
+    background-color: #f5f5f5;
+  }
+  
+  .notification-card-container::-webkit-scrollbar-thumb {
+    background-color: white;
+  }
+  
+  /* .notification-card-container::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+  }
+   */
